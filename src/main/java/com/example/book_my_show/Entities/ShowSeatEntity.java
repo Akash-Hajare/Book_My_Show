@@ -23,4 +23,10 @@ public class ShowSeatEntity {
     private SeatType seatType;
 
     private Date bookedAt;
+
+    @ManyToOne
+    @JoinColumn
+    private ShowEntity showEntity;
+
+
 }

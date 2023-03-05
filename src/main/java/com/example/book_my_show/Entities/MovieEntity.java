@@ -7,6 +7,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "movies")
 @Data
@@ -30,5 +33,10 @@ public class MovieEntity {
 
     @Enumerated(value = EnumType.STRING)
     private Genre genre;
+
+    //parent wrt show
+    @OneToMany(mappedBy = "movieEntity",cascade = CascadeType.ALL)
+    private List<ShowEntity> showEntityLit= new ArrayList<>();
+
 
 }
