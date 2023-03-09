@@ -1,6 +1,7 @@
 package com.example.book_my_show.Service;
 
 
+import com.example.book_my_show.Convertors.UserConvertor;
 import com.example.book_my_show.Entities.UserEntity;
 import com.example.book_my_show.EntryDto.UserEntryDto;
 import com.example.book_my_show.Repository.UserRepository;
@@ -13,11 +14,9 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public String addUser(UserEntryDto userEntryDto) {
+    public String addUser(UserEntryDto userEntryDto) throws Exception {
 
-        UserEntity userEntity = UserEntity.builder().age(userEntryDto.getAge())
-                .email(userEntryDto.getEmail()).mobNo(userEntryDto.getMobNo())
-                .name(userEntryDto.getName()).address(userEntryDto.getAddress()).build();
+        UserEntity userEntity= UserConvertor.convertDtoToEntity(userEntryDto);
 
         userRepository.save(userEntity);
         return "User added successfully";
