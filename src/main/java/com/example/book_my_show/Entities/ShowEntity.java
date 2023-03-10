@@ -2,12 +2,14 @@ package com.example.book_my_show.Entities;
 
 
 import com.example.book_my_show.Enums.ShowType;
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import javax.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -19,6 +21,7 @@ import java.util.List;
 @Table(name = "shows")
 @Data
 @NoArgsConstructor
+@Builder
 @AllArgsConstructor
 public class ShowEntity {
 

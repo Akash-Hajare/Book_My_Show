@@ -1,11 +1,12 @@
 package com.example.book_my_show.Entities;
 
 import com.example.book_my_show.Enums.SeatType;
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "theater_seats")
