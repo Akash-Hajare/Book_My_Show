@@ -17,7 +17,7 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @PostMapping("/add")
+    @PostMapping("/add_user")
     public ResponseEntity<String> addUser(@RequestBody UserEntryDto userEntryDto){
 
         try{

@@ -16,7 +16,7 @@ public class TheaterController {
     @Autowired
     TheaterService theaterService;
 
-    @PostMapping("/add")
+    @PostMapping("/add_theater")
     public ResponseEntity<String> addTheater(@RequestBody TheaterEntryDto theaterEntryDto){
         try{
             String response=theaterService.addTheater(theaterEntryDto);

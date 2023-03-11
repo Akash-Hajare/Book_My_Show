@@ -17,7 +17,7 @@ public class TicketController {
     @Autowired
     TicketService ticketService;
 
-    @PostMapping("/book-tickets")
+    @PostMapping("/book_tickets")
     public ResponseEntity<String> bookTicket(@RequestBody TicketEntryDto ticketEntryDto){
 
 
