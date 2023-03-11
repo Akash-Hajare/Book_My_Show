@@ -8,3 +8,7 @@
 - Exception Handling is done.
 
 ## SCHEMA
+![login](https://github.com/Akash-Hajare/Book_My_Show/blob/master/Screenshots/Schema.jpg)
+
+## API's
+![login]()
